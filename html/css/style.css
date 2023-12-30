@@ -77,6 +77,12 @@ body {
     margin-right: 5%;
 }
 
+.menu-item-cents {
+    vertical-align: text-top;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
 .change {
     vertical-align: text-top;
     font-size: 15px;
@@ -93,8 +99,12 @@ body {
     top: 2%;
 }
 
+.vmiddle {
+    top: 22%;
+}
+
 .bottom {
-    top: 56%;
+    top: 50%;
 }
 
 .bottom.far-left {

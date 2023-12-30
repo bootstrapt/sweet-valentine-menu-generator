@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os 
 
-MENUS = ['menu', 'thanksgiving']
+MENUS = ['menu-left', 'menu-right']
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 def take_screenshot(html_file_path, output_file_path, resolution=(1920, 1080)):
