@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<title>Dynamic Menu</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+</style>
+</head>
+<body>
+
+
+
+    <div class="menu-container vmiddle left">
+        <div class="menu-header">
+            <h1 id="menu-title">Cinnamon Rolls</h1>
+        </div>
+        <div class="menu-image">
+            <img src="img/cinnamon rolls.jpg" alt="Cinnamon Rolls" />
+        </div>
+        <!-- Menu items will be dynamically inserted here -->
+        <div id="menu-items">
+            <!-- JavaScript will populate menu items here -->
+            <div class="menu-item extra-margin">
+                <div class="menu-item-title">
+                    <h2>Individual</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$7</span><span class="menu-item-cents">50</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>½ Dozen</h2><span class="menu-item-modifier">&nbsp;&nbsp;fresh baked</span>
+                </div>
+                <div class="menu-item-price">
+                    <span>$42</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>½ Dozen</h2><span class="menu-item-modifier">&nbsp;&nbsp;take & bake</span>
+                </div>
+                <div class="menu-item-price">
+                    <span>$38</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-container vmiddle middle">
+        <div class="menu-header">
+            <h1 id="menu-title">Cookies</h1>
+        </div>
+        <div class="menu-image">
+            <img src="img/cookies.jpg" alt="Cookies" />
+        </div>
+        <!-- Menu items will be dynamically inserted here -->
+        <div id="menu-items">
+            <!-- JavaScript will populate menu items here -->
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Each</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$2</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Three</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$5</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Six</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$10</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Dozen</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$20</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-container vmiddle right">
+        <div class="menu-header">
+            <h1 id="menu-title">Drinks</h1>
+        </div>
+        <div class="menu-image">
+            <img src="img/drinks.jpg" alt="Drinks" />
+        </div>
+        <!-- Menu items will be dynamically inserted here -->
+        <div id="menu-items">
+            <!-- JavaScript will populate menu items here -->
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Coffee</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$2</span><span class="menu-item-cents">25</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Milk</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$2</span><span class="menu-item-cents">25</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Evian Water</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$2</span><span class="menu-item-cents">75</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Soda</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$3</span><span class="menu-item-cents">50</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Apple Juice</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$3</span><span class="menu-item-cents">50</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="bottom far-left">
+        <img src="img/giftcard-promo.png" alt="Gift Card Promo" style="max-height: 420px;" />
+    </div>
+<!--
+    <script>
+    // This function will fetch the data from Google Sheets and populate the menu
+    function fetchMenuData() {
+        const apiKey = 'YOUR_API_KEY'; // Replace with your API key
+        const sheetId = 'YOUR_SHEET_ID'; // Replace with your sheet ID
+        const range = 'Sheet1!A2:E'; // Adjust the range accordingly
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const rows = data.values;
+            const menuItemsContainer = document.getElementById('menu-items');
+
+            rows.forEach((row, index) => {
+                const itemName = row[0];
+                const itemPrice = row[1];
+                const itemDescription = row[2];
+                const itemCategory = row[3];
+                // Create menu item element
+                const menuItemElement = document.createElement('div');
+                menuItemElement.classList.add('menu-item');
+                menuItemElement.innerHTML = `
+                    <div>
+                        <h2>${itemName}</h2>
+                        <p>${itemDescription}</p>
+                    </div>
+                    <div>
+                        <span>${itemPrice}</span>
+                    </div>
+                `;
+                // Append the menu item to the container
+                menuItemsContainer.appendChild(menuItemElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data: ', error);
+        });
+    }
+
+    // Call the function on load
+    fetchMenuData();
+    </script>
+-->
+
+</body>
+</html>
