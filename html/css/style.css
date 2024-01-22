@@ -131,6 +131,16 @@ body {
     left: 74%;
 }
 
+.left-center {
+    position: fixed;
+    left: 34%;
+}
+
+.right-center {
+    position: fixed;
+    left: 66%;
+}
+
 .overlay {
     position: absolute; 
     background: rgba(57, 57, 57, 0.5);
