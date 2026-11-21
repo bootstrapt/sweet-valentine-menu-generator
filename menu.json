@@ -1,0 +1,121 @@
+{
+  "_help": [
+    "Edit prices and items here, then run: python output-menus.py",
+    "Each screen has a sidebar (shown under the logo) and up to 3 columns of categories.",
+    "price: a number or string, e.g. 6, \"2.50\". note: optional small grey text after the name.",
+    "sidebar entries: {\"text\": \"...\", \"subtext\": \"...\"} or {\"image\": \"img/file.png\"}. Use [] for an empty sidebar."
+  ],
+  "screens": {
+    "menu-left": {
+      "sidebar": [
+        {"text": "Whole pies, bundts & cobblers", "subtext": "Ask us about taking one home"}
+      ],
+      "columns": [
+        [
+          {
+            "title": "Cookies",
+            "image": "img/cookies.jpg",
+            "items": [
+              {"name": "Each", "price": "2.50"},
+              {"name": "Three", "price": 6},
+              {"name": "Six", "price": 12},
+              {"name": "Dozen", "price": 24}
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Banana Pudding",
+            "image": "img/banana pudding.jpg",
+            "items": [
+              {"name": "Individual", "price": 7},
+              {"name": "Medium", "price": 15},
+              {"name": "Large", "price": 44}
+            ]
+          },
+          {
+            "title": "Cinnamon Rolls",
+            "image": "img/cinnamon rolls.jpg",
+            "items": [
+              {"name": "Individual", "price": "7.75"},
+              {"name": "½ Dozen", "note": "fresh baked", "price": 42},
+              {"name": "½ Dozen", "note": "take & bake", "price": 39}
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Drinks",
+            "image": "img/drinks.jpg",
+            "items": [
+              {"name": "Coffee", "price": "2.25"},
+              {"name": "Cold Brew", "price": "3.99"},
+              {"name": "Milk", "price": "2.25"},
+              {"name": "Coke / Fanta", "price": "3.50"},
+              {"name": "Apple Juice", "price": "3.50"},
+              {"name": "Fiji Water", "price": "3.75"},
+              {"name": "Lemonade", "note": "single", "price": "4.25"},
+              {"name": "Lemonade", "note": "large", "price": "5.25"}
+            ]
+          }
+        ]
+      ]
+    },
+    "menu-right": {
+      "sidebar": [
+        {"text": "Whole pies, bundts & cobblers", "subtext": "Ask us about taking one home"}
+      ],
+      "columns": [
+        [
+          {
+            "title": "Signature Bundts",
+            "image": "img/bundt cake.jpg",
+            "items": [
+              {"name": "Slice", "price": 6},
+              {"name": "Whole", "note": "10\" round", "price": 45}
+            ]
+          },
+          {
+            "title": "Teeny Bundts",
+            "image": "img/teeny bundts.jpg",
+            "items": [
+              {"name": "Each", "price": "3.50"},
+              {"name": "Dozen", "price": 39}
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Pies",
+            "image": "img/pies.jpg",
+            "items": [
+              {"name": "Slice", "price": "5.50"},
+              {"name": "Whole", "price": 39}
+            ]
+          },
+          {
+            "title": "Cobblers",
+            "image": "img/peach cobbler.jpg",
+            "items": [
+              {"name": "Individual", "price": 7},
+              {"name": "Small", "note": "8\" x 8\"", "price": 49},
+              {"name": "Large", "note": "13\" x 9\"", "price": 69}
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Ice Cream",
+            "image": "img/ice cream.jpg",
+            "items": [
+              {"name": "Sandwich", "price": 6},
+              {"name": "Sundae", "price": "6.50"},
+              {"name": "Single", "price": "2.50"},
+              {"name": "Double", "price": "5.50"}
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}

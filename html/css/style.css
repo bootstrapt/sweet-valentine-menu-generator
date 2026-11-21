@@ -1,148 +1,183 @@
-body {
+/* Layout is designed for a 1920x1080 CSS viewport (rendered at 2x for 4K TVs). */
+:root {
+    --red: #c21e1d;
+    --ink: #36454F;
+    --muted: #6b7f8c;
+    --rule: #dddddd;
+    --card-bg: #f5f5f5;  /* matches the photos' background so their edges disappear */
+    --radius: 12px;
+    --gap: 36px;
+    --sidebar-width: 480px;
+    --photo-height: 190px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    font-family: 'PT Sans Narrow', sans-serif;
+    height: 100%;
+}
+
+body {
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
     background-color: #ffe5d9;
+    /* The logo is part of the background image, in the top-left corner */
     background-image: url("../img/background.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
 
-.menu-container {
-    background: #c21e1d;
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    height: 6%;
-    width: 18%;
+/* Logo/sidebar column + three menu columns; every column starts on the same top line */
+.screen {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) repeat(3, 1fr);
+    column-gap: var(--gap);
+    height: 100vh;
+    padding: 28px 56px 28px 0;
 }
 
-.menu-header {
-    text-align: center;
-    color: #ffffff;
-}
-
-.menu-title {
-    font-size: 14px;
-    color: #ffffff;
-    margin: auto;
-}
-
-.menu-header h1 {
-    display: inline-block;
-    margin-block-start: .32em;
-}
-
-#menu-items {
+.column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+    gap: var(--gap);
+    min-height: 0;
 }
 
-.menu-item {
+/* A column with a single card centres it vertically so it doesn't leave a hole at the bottom */
+.column:has(> .card:only-child) {
+    justify-content: center;
+}
+
+/* Stacked cards split the column height evenly, so second-row headers line up across
+   columns and the bottoms line up too; any spare room goes to the photo. */
+.column:not(:has(> .card:only-child)) > .card {
+    flex: 1 1 0;
+}
+
+/* ---------- Cards ---------- */
+.card {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 5%;
-    border-bottom: #ddd solid 1px;
+    flex-direction: column;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
 }
 
-.menu-item:last-child {
+.card-title {
+    margin: 0;
+    padding: 10px 0 12px;
+    background: var(--red);
+    color: #ffffff;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.card-image {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: var(--photo-height);
+}
+
+/* Photo fills whatever height the card gives it (at least --photo-height), capped so the
+   small 300x200 source photos don't get blurry */
+.card-image img {
+    position: absolute;
+    inset: 14px 0 4px;
+    margin: auto;
+    height: calc(100% - 18px);
+    max-height: 250px;
+    width: auto;
+}
+
+.items {
+    list-style: none;
+    margin: 0;
+    padding: 0 24px 6px;
+}
+
+.item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.item:last-child {
     border-bottom: none;
 }
 
-.menu-item-title {
-    font-size: 22px;
-    color: #36454F;
+.item-name {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
 }
 
-.menu-item-title h2 {
-    font-size: 1.7em;
-    display: inline-block;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+.item-note {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 6px;
 }
 
-.menu-item-modifier {
-    font-size: 18px;
-    color: #798E9C;
-    display: inline;
+.item-price {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--red);
+    white-space: nowrap;
 }
 
-.menu-item-price {
-    font-size: 30px;
-    color: #c21e1d;
-    font-weight: bold;
-    margin-right: 5%;
-}
-
-.menu-item-cents {
-    vertical-align: text-top;
-    font-size: 15px;
+.item-price .cents {
+    font-size: 20px;
+    vertical-align: 0.75em;
     text-decoration: underline;
+    margin-left: 1px;
 }
 
-.change {
-    vertical-align: text-top;
-    font-size: 15px;
-    text-decoration: underline;
-}
-
-.menu-image {
-    text-align: center;
-    padding-bottom: 10px;
-    height: 180px;
-}
-
-.top {
-    top: 2%;
-}
-
-.vmiddle {
-    top: 22%;
-}
-
-.vdrinks {
-    top: 8%;
-}
-
-.bottom {
-    top: 50%;
-}
-
-.bottom.far-left {
-    top: 42%;
-}
-
-.far-left {
-    position: fixed;
-    left: 3%;
-}
-
-.left {
-    position: fixed;
-    left: 26%;
-}
-
-.middle {
-    position: fixed;
-    left: 50%;
-}
-
-.right {
-    position: fixed;
-    left: 74%;
-}
-
-.overlay {
-    position: absolute; 
-    background: rgba(57, 57, 57, 0.5);
-
-    /* center overlay text */
+/* ---------- Sidebar (under the logo in the background) ---------- */
+.sidebar {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
+    gap: 24px;
+    padding: 440px 40px 40px 56px;
+}
+
+.sidebar-note {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    border-top: 8px solid var(--red);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+    padding: 22px 26px;
+    text-align: center;
+}
+
+.sidebar-text {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--red);
+}
+
+.sidebar-subtext {
+    margin: 10px 0 0;
+    font-size: 28px;
+    color: var(--ink);
+}
+
+.sidebar-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }

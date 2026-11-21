@@ -4,7 +4,9 @@ import time
 import os
 import argparse
 
-MENUS = ['menu-left', 'menu-right']
+import build_menus
+
+MENUS = build_menus.screen_names()  # screens defined in menu.json
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 # TCL 58S470G (58" S Class) native panel resolution: 4K UHD
@@ -65,9 +67,15 @@ if __name__ == "__main__":
     parser.add_argument('--menu', choices=MENUS,
                         help='Generate only specific menu')
 
+    parser.add_argument('--no-build', action='store_true',
+                        help="Don't regenerate the HTML from menu.json; screenshot the existing HTML files")
+
     args = parser.parse_args()
 
     menus_to_generate = [args.menu] if args.menu else MENUS
+
+    if not args.no_build:
+        build_menus.build(menus_to_generate)
 
     for menu in menus_to_generate:
         shrink = args.shrink_left if menu == "menu-left" else args.shrink_right
