@@ -4,7 +4,7 @@
     --ink: #36454F;
     --muted: #6b7f8c;
     --rule: #dddddd;
-    --card-bg: #f5f5f5;  /* matches the photos' background so their edges disappear */
+    --card-bg: #fdfdfd;  /* matches the (upscaled) photos' background so their edges disappear */
     --radius: 12px;
     --gap: 36px;
     --sidebar-width: 480px;
@@ -84,8 +84,8 @@ body {
     min-height: var(--photo-height);
 }
 
-/* Photo fills whatever height the card gives it (at least --photo-height), capped so the
-   small 300x200 source photos don't get blurry */
+/* Photo fills whatever height the card gives it (at least --photo-height), up to a cap.
+   Photos are 4x AI-upscaled (originals in img/originals/) so they stay sharp at 4K. */
 .card-image img {
     position: absolute;
     inset: 14px 0 4px;
