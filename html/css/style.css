@@ -4,8 +4,10 @@ body {
     font-family: 'PT Sans Narrow', sans-serif;
     background-color: #ffe5d9;
     background-image: url("../img/background.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .menu-container {
@@ -65,13 +67,13 @@ body {
 }
 
 .menu-item-modifier {
-    font-size: 20px;
+    font-size: 18px;
     color: #798E9C;
     display: inline;
 }
 
 .menu-item-price {
-    font-size: 34px;
+    font-size: 30px;
     color: #c21e1d;
     font-weight: bold;
     margin-right: 5%;
@@ -101,6 +103,10 @@ body {
 
 .vmiddle {
     top: 22%;
+}
+
+.vdrinks {
+    top: 8%;
 }
 
 .bottom {

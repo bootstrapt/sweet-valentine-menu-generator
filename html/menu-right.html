@@ -1,48 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-<title>Dynamic Menu</title>
-<link rel="stylesheet" href="css/style.css">
-<style>
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dynamic Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    </style>
 </head>
+
 <body>
 
-    <div class="menu-container top left">
-        <div class="menu-header">
-            <h1 id="menu-title">Teeny Bundts</h1>
-        </div>
-        <div class="menu-image">
-            <img src="img/teeny bundts.jpg" alt="Teeny Bundts" />
-        </div>
-        <!-- Menu items will be dynamically inserted here -->
-        <div id="menu-items">
-            <!-- JavaScript will populate menu items here -->
-            <div class="menu-item">
-                <div class="menu-item-title">
-                    <h2>Each</h2>
-                </div>
-                <div class="menu-item-price">
-                    <span>$3</span><span class="menu-item-cents">50</span>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-item-title">
-                    <h2>Dozen</h2>
-                </div>
-                <div class="menu-item-price">
-                    <span>$38</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="menu-container top middle">
+    <div class="menu-container top left">
         <div class="menu-header">
             <h1 id="menu-title">Signature Bundts</h1>
         </div>
@@ -57,7 +31,7 @@
                     <h2>Slice</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$5</span>
+                    <span>$6</span>
                 </div>
             </div>
             <div class="menu-item">
@@ -65,7 +39,7 @@
                     <h2>Whole&nbsp;</h2><span class="menu-item-modifier">10" round</span>
                 </div>
                 <div class="menu-item-price">
-                    <span>$38</span>
+                    <span>$44</span>
                 </div>
             </div>
         </div>
@@ -73,34 +47,32 @@
 
     <div class="menu-container bottom left">
         <div class="menu-header">
-            <h1 id="menu-title">Banana Pudding</h1>
+            <h1 id="menu-title">Teeny Bundts</h1>
         </div>
         <div class="menu-image">
-            <img src="img/banana pudding.jpg" alt="Banana Pudding" />
+            <img src="img/teeny bundts.jpg" alt="Teeny Bundts" />
         </div>
-        <!-- Menu items will be dynamically inserted here -->
         <div id="menu-items">
-            <!-- JavaScript will populate menu items here -->
-            <div class="menu-item extra-margin">
+            <div class="menu-item">
                 <div class="menu-item-title">
-                    <h2>Individual</h2>
+                    <h2>Each</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$5</span>
+                    <span>$3</span><span class="menu-item-cents">50</span>
                 </div>
             </div>
             <div class="menu-item">
                 <div class="menu-item-title">
-                    <h2>Large</h2>
+                    <h2>Dozen</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$38</span>
+                    <span>$39</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="menu-container top right">
+    <div class="menu-container vmiddle right">
         <div class="menu-header">
             <h1 id="menu-title">Ice Cream</h1>
         </div>
@@ -115,21 +87,37 @@
                     <h2>Sandwich</h2>
                 </div>
                 <div class="menu-item-price">
+                    <span>$6</span>
+                </div>
+            </div>
+            <div class="menu-item extra-margin">
+                <div class="menu-item-title">
+                    <h2>Sundae</h2>
+                </div>
+                <div class="menu-item-price">
                     <span>$6</span><span class="menu-item-cents">50</span>
                 </div>
             </div>
             <div class="menu-item">
                 <div class="menu-item-title">
-                    <h2>A la mode</h2>
+                    <h2>Single</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>+$2</span>
+                    <span>$2</span><span class="menu-item-cents">50</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Double</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$5</span><span class="menu-item-cents">50</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="menu-container bottom right">
+    <div class="menu-container bottom middle">
         <div class="menu-header">
             <h1 id="menu-title">Cobblers</h1>
         </div>
@@ -144,7 +132,7 @@
                     <h2>Individual</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$6</span>
+                    <span>$7</span>
                 </div>
             </div>
             <div class="menu-item">
@@ -152,7 +140,7 @@
                     <h2>Small&nbsp;&nbsp;</h2><span class="menu-item-modifier">8" x 8"</span>
                 </div>
                 <div class="menu-item-price">
-                    <span>$45</span>
+                    <span>$48</span>
                 </div>
             </div>
             <div class="menu-item">
@@ -160,13 +148,13 @@
                     <h2>Large&nbsp;&nbsp;</h2><span class="menu-item-modifier">13" x 9"</span>
                 </div>
                 <div class="menu-item-price">
-                    <span>$65</span>
+                    <span>$68</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="menu-container bottom middle">
+    <div class="menu-container top middle">
         <div class="menu-header">
             <h1 id="menu-title">Pies</h1>
         </div>
@@ -181,7 +169,7 @@
                     <h2>Slice</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$6</span>
+                    <span>$5</span><span class="menu-item-cents">50</span>
                 </div>
             </div>
             <div class="menu-item">
@@ -189,19 +177,19 @@
                     <h2>Whole</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$38</span>
+                    <span>$39</span>
                 </div>
             </div>
         </div>
     </div>
 
-   <!-- Examaple of an image below the logo on the left sidebar
+    <!-- Examaple of an image below the logo on the left sidebar
     <div class="bottom far-left">
         <img src="img/giftcard-promo.png" alt="Gift Card Promo" style="max-height: 420px;" />
     </div>
     -->
 
-<!--
+    <!--
     <script>
     // This function will fetch the data from Google Sheets and populate the menu
     function fetchMenuData() {
@@ -248,4 +236,5 @@
 -->
 
 </body>
+
 </html>

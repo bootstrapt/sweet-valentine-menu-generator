@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-<title>Dynamic Menu</title>
-<link rel="stylesheet" href="css/style.css">
-<style>
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dynamic Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    </style>
 </head>
+
 <body>
 
 
-
     <div class="menu-container vmiddle left">
+        <div class="menu-header">
+            <h1 id="menu-title">Cookies</h1>
+        </div>
+        <div class="menu-image">
+            <img src="img/cookies.jpg" alt="Cookies" />
+        </div>
+        <!-- Menu items will be dynamically inserted here -->
+        <div id="menu-items">
+            <!-- JavaScript will populate menu items here -->
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Each</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$2</span><span class="menu-item-cents">50</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Three</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$6</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Six</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$12</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Dozen</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$24</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="menu-container bottom middle">
         <div class="menu-header">
             <h1 id="menu-title">Cinnamon Rolls</h1>
         </div>
@@ -30,7 +78,7 @@
                     <h2>Individual</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$7</span><span class="menu-item-cents">50</span>
+                    <span>$7</span><span class="menu-item-cents">75</span>
                 </div>
             </div>
             <div class="menu-item">
@@ -46,58 +94,50 @@
                     <h2>½ Dozen</h2><span class="menu-item-modifier">&nbsp;&nbsp;take & bake</span>
                 </div>
                 <div class="menu-item-price">
-                    <span>$38</span>
+                    <span>$39</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="menu-container vmiddle middle">
+    <div class="menu-container top middle">
         <div class="menu-header">
-            <h1 id="menu-title">Cookies</h1>
+            <h1 id="menu-title">Banana Pudding</h1>
         </div>
-        <div class="menu-image">
-            <img src="img/cookies.jpg" alt="Cookies" />
+        <div class="menu-image" style="margin: -10px;">
+            <img src="img/banana pudding.jpg" alt="Banana Pudding" height="90%" />
         </div>
         <!-- Menu items will be dynamically inserted here -->
         <div id="menu-items">
             <!-- JavaScript will populate menu items here -->
-            <div class="menu-item">
+            <div class="menu-item extra-margin">
                 <div class="menu-item-title">
-                    <h2>Each</h2>
+                    <h2>Individual</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$2</span>
+                    <span>$7</span>
                 </div>
             </div>
             <div class="menu-item">
                 <div class="menu-item-title">
-                    <h2>Three</h2>
+                    <h2>Medium</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$5</span>
+                    <span>$15</span>
                 </div>
             </div>
             <div class="menu-item">
                 <div class="menu-item-title">
-                    <h2>Six</h2>
+                    <h2>Large</h2>
                 </div>
                 <div class="menu-item-price">
-                    <span>$10</span>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-item-title">
-                    <h2>Dozen</h2>
-                </div>
-                <div class="menu-item-price">
-                    <span>$20</span>
+                    <span>$44</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="menu-container vmiddle right">
+    <div class="menu-container vdrinks right">
         <div class="menu-header">
             <h1 id="menu-title">Drinks</h1>
         </div>
@@ -117,6 +157,14 @@
             </div>
             <div class="menu-item">
                 <div class="menu-item-title">
+                    <h2>Cold Brew</h2>
+                </div>
+                <div class="menu-item-price">
+                    <span>$3</span><span class="menu-item-cents">99</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
                     <h2>Milk</h2>
                 </div>
                 <div class="menu-item-price">
@@ -125,15 +173,7 @@
             </div>
             <div class="menu-item">
                 <div class="menu-item-title">
-                    <h2>Evian Water</h2>
-                </div>
-                <div class="menu-item-price">
-                    <span>$2</span><span class="menu-item-cents">75</span>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-item-title">
-                    <h2>Soda</h2>
+                    <h2>Coke / Fanta</h2>
                 </div>
                 <div class="menu-item-price">
                     <span>$3</span><span class="menu-item-cents">50</span>
@@ -155,17 +195,32 @@
                     <span>$3</span><span class="menu-item-cents">75</span>
                 </div>
             </div>
-
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Lemonade</h2><span class="menu-item-modifier">&nbsp;&nbsp;single</span>
+                </div>
+                <div class="menu-item-price">
+                    <span>$4</span><span class="menu-item-cents">25</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <h2>Lemonade</h2><span class="menu-item-modifier">&nbsp;&nbsp;large</span>
+                </div>
+                <div class="menu-item-price">
+                    <span>$5</span><span class="menu-item-cents">25</span>
+                </div>
+            </div>
         </div>
     </div>
 
-   <!-- Examaple of an image below the logo on the left sidebar
+    <!-- Examaple of an image below the logo on the left sidebar
     <div class="bottom far-left">
         <img src="img/giftcard-promo.png" alt="Gift Card Promo" style="max-height: 420px;" />
     </div>
     -->
 
-<!--
+    <!--
     <script>
     // This function will fetch the data from Google Sheets and populate the menu
     function fetchMenuData() {
@@ -212,4 +267,5 @@
 -->
 
 </body>
+
 </html>
